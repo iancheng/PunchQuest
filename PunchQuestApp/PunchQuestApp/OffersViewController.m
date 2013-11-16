@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Simon. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "OffersViewController.h"
 
-@interface DetailViewController ()
+@interface OffersViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
 
-@implementation DetailViewController
+@implementation OffersViewController
 
 #pragma mark - Managing the detail item
 

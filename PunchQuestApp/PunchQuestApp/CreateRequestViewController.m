@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Simon. All rights reserved.
 //
 
-#import "MasterViewController.h"
+#import "CreateRequestViewController.h"
 
-#import "DetailViewController.h"
+#import "OffersViewController.h"
 
-@interface MasterViewController () {
+@interface CreateRequestViewController () {
     NSMutableArray *_objects;
 }
 @end
 
-@implementation MasterViewController
+@implementation CreateRequestViewController
 
 - (void)awakeFromNib
 {
@@ -34,7 +34,7 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController = (OffersViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 - (void)didReceiveMemoryWarning

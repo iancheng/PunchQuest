@@ -15,8 +15,8 @@
 		BB8C842918381DE700E38983 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C842818381DE700E38983 /* AppDelegate.m */; };
 		BB8C842C18381DE700E38983 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8C842A18381DE700E38983 /* Main_iPhone.storyboard */; };
 		BB8C842F18381DE700E38983 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8C842D18381DE700E38983 /* Main_iPad.storyboard */; };
-		BB8C843218381DE700E38983 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C843118381DE700E38983 /* MasterViewController.m */; };
-		BB8C843518381DE700E38983 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C843418381DE700E38983 /* DetailViewController.m */; };
+		BB8C843218381DE700E38983 /* CreateRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C843118381DE700E38983 /* CreateRequestViewController.m */; };
+		BB8C843518381DE700E38983 /* OffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C843418381DE700E38983 /* OffersViewController.m */; };
 		BB8C843718381DE700E38983 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8C843618381DE700E38983 /* Images.xcassets */; };
 		BB8C843E18381DE700E38983 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C843D18381DE700E38983 /* XCTest.framework */; };
 		BB8C843F18381DE700E38983 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C841818381DE700E38983 /* Foundation.framework */; };
@@ -24,6 +24,7 @@
 		BB8C844818381DE700E38983 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB8C844618381DE700E38983 /* InfoPlist.strings */; };
 		BB8C844A18381DE700E38983 /* PunchQuestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C844918381DE700E38983 /* PunchQuestAppTests.m */; };
 		BBE2532E183820A300194760 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE2532D183820A300194760 /* FacebookSDK.framework */; };
+		BBE25331183826AD00194760 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE25330183826AD00194760 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +50,10 @@
 		BB8C842818381DE700E38983 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BB8C842B18381DE700E38983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		BB8C842E18381DE700E38983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		BB8C843018381DE700E38983 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		BB8C843118381DE700E38983 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		BB8C843318381DE700E38983 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		BB8C843418381DE700E38983 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BB8C843018381DE700E38983 /* CreateRequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateRequestViewController.h; sourceTree = "<group>"; };
+		BB8C843118381DE700E38983 /* CreateRequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateRequestViewController.m; sourceTree = "<group>"; };
+		BB8C843318381DE700E38983 /* OffersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffersViewController.h; sourceTree = "<group>"; };
+		BB8C843418381DE700E38983 /* OffersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersViewController.m; sourceTree = "<group>"; };
 		BB8C843618381DE700E38983 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BB8C843C18381DE700E38983 /* PunchQuestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PunchQuestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8C843D18381DE700E38983 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -60,6 +61,8 @@
 		BB8C844718381DE700E38983 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB8C844918381DE700E38983 /* PunchQuestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PunchQuestAppTests.m; sourceTree = "<group>"; };
 		BBE2532D183820A300194760 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		BBE2532F183826AD00194760 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		BBE25330183826AD00194760 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,12 +128,14 @@
 				BB8C842818381DE700E38983 /* AppDelegate.m */,
 				BB8C842A18381DE700E38983 /* Main_iPhone.storyboard */,
 				BB8C842D18381DE700E38983 /* Main_iPad.storyboard */,
-				BB8C843018381DE700E38983 /* MasterViewController.h */,
-				BB8C843118381DE700E38983 /* MasterViewController.m */,
-				BB8C843318381DE700E38983 /* DetailViewController.h */,
-				BB8C843418381DE700E38983 /* DetailViewController.m */,
+				BB8C843018381DE700E38983 /* CreateRequestViewController.h */,
+				BB8C843118381DE700E38983 /* CreateRequestViewController.m */,
+				BB8C843318381DE700E38983 /* OffersViewController.h */,
+				BB8C843418381DE700E38983 /* OffersViewController.m */,
 				BB8C843618381DE700E38983 /* Images.xcassets */,
 				BB8C841F18381DE700E38983 /* Supporting Files */,
+				BBE2532F183826AD00194760 /* LoginViewController.h */,
+				BBE25330183826AD00194760 /* LoginViewController.m */,
 			);
 			path = PunchQuestApp;
 			sourceTree = "<group>";
@@ -280,9 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB8C842918381DE700E38983 /* AppDelegate.m in Sources */,
-				BB8C843218381DE700E38983 /* MasterViewController.m in Sources */,
+				BB8C843218381DE700E38983 /* CreateRequestViewController.m in Sources */,
 				BB8C842518381DE700E38983 /* main.m in Sources */,
-				BB8C843518381DE700E38983 /* DetailViewController.m in Sources */,
+				BB8C843518381DE700E38983 /* OffersViewController.m in Sources */,
+				BBE25331183826AD00194760 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +432,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PunchQuestApp/PunchQuestApp-Prefix.pch";
 				INFOPLIST_FILE = "PunchQuestApp/PunchQuestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,6 +450,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PunchQuestApp/PunchQuestApp-Prefix.pch";
 				INFOPLIST_FILE = "PunchQuestApp/PunchQuestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class DetailViewController;
+@class OffersViewController;
 
-@interface MasterViewController : UITableViewController
+@interface CreateRequestViewController : UITableViewController
 
-@property (strong, nonatomic) DetailViewController *detailViewController;
+@property (strong, nonatomic) OffersViewController *detailViewController;
 
 @end
