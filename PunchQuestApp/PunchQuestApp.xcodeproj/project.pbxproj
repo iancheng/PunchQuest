@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB8C841918381DE700E38983 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C841818381DE700E38983 /* Foundation.framework */; };
+		BB8C841B18381DE700E38983 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C841A18381DE700E38983 /* CoreGraphics.framework */; };
+		BB8C841D18381DE700E38983 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C841C18381DE700E38983 /* UIKit.framework */; };
+		BB8C842318381DE700E38983 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB8C842118381DE700E38983 /* InfoPlist.strings */; };
+		BB8C842518381DE700E38983 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C842418381DE700E38983 /* main.m */; };
+		BB8C842918381DE700E38983 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C842818381DE700E38983 /* AppDelegate.m */; };
+		BB8C842C18381DE700E38983 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8C842A18381DE700E38983 /* Main_iPhone.storyboard */; };
+		BB8C842F18381DE700E38983 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8C842D18381DE700E38983 /* Main_iPad.storyboard */; };
+		BB8C843218381DE700E38983 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C843118381DE700E38983 /* MasterViewController.m */; };
+		BB8C843518381DE700E38983 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C843418381DE700E38983 /* DetailViewController.m */; };
+		BB8C843718381DE700E38983 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8C843618381DE700E38983 /* Images.xcassets */; };
+		BB8C843E18381DE700E38983 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C843D18381DE700E38983 /* XCTest.framework */; };
+		BB8C843F18381DE700E38983 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C841818381DE700E38983 /* Foundation.framework */; };
+		BB8C844018381DE700E38983 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C841C18381DE700E38983 /* UIKit.framework */; };
+		BB8C844818381DE700E38983 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB8C844618381DE700E38983 /* InfoPlist.strings */; };
+		BB8C844A18381DE700E38983 /* PunchQuestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C844918381DE700E38983 /* PunchQuestAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB8C844118381DE700E38983 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB8C840D18381DE700E38983 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB8C841418381DE700E38983;
+			remoteInfo = PunchQuestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB8C841518381DE700E38983 /* PunchQuestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunchQuestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8C841818381DE700E38983 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BB8C841A18381DE700E38983 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BB8C841C18381DE700E38983 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BB8C842018381DE700E38983 /* PunchQuestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PunchQuestApp-Info.plist"; sourceTree = "<group>"; };
+		BB8C842218381DE700E38983 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB8C842418381DE700E38983 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB8C842618381DE700E38983 /* PunchQuestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PunchQuestApp-Prefix.pch"; sourceTree = "<group>"; };
+		BB8C842718381DE700E38983 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BB8C842818381DE700E38983 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BB8C842B18381DE700E38983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		BB8C842E18381DE700E38983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		BB8C843018381DE700E38983 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		BB8C843118381DE700E38983 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		BB8C843318381DE700E38983 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BB8C843418381DE700E38983 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BB8C843618381DE700E38983 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BB8C843C18381DE700E38983 /* PunchQuestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PunchQuestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8C843D18381DE700E38983 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BB8C844518381DE700E38983 /* PunchQuestAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PunchQuestAppTests-Info.plist"; sourceTree = "<group>"; };
+		BB8C844718381DE700E38983 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB8C844918381DE700E38983 /* PunchQuestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PunchQuestAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB8C841218381DE700E38983 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8C841B18381DE700E38983 /* CoreGraphics.framework in Frameworks */,
+				BB8C841D18381DE700E38983 /* UIKit.framework in Frameworks */,
+				BB8C841918381DE700E38983 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8C843918381DE700E38983 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8C843E18381DE700E38983 /* XCTest.framework in Frameworks */,
+				BB8C844018381DE700E38983 /* UIKit.framework in Frameworks */,
+				BB8C843F18381DE700E38983 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB8C840C18381DE700E38983 = {
+			isa = PBXGroup;
+			children = (
+				BB8C841E18381DE700E38983 /* PunchQuestApp */,
+				BB8C844318381DE700E38983 /* PunchQuestAppTests */,
+				BB8C841718381DE700E38983 /* Frameworks */,
+				BB8C841618381DE700E38983 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB8C841618381DE700E38983 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C841518381DE700E38983 /* PunchQuestApp.app */,
+				BB8C843C18381DE700E38983 /* PunchQuestAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB8C841718381DE700E38983 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C841818381DE700E38983 /* Foundation.framework */,
+				BB8C841A18381DE700E38983 /* CoreGraphics.framework */,
+				BB8C841C18381DE700E38983 /* UIKit.framework */,
+				BB8C843D18381DE700E38983 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB8C841E18381DE700E38983 /* PunchQuestApp */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C842718381DE700E38983 /* AppDelegate.h */,
+				BB8C842818381DE700E38983 /* AppDelegate.m */,
+				BB8C842A18381DE700E38983 /* Main_iPhone.storyboard */,
+				BB8C842D18381DE700E38983 /* Main_iPad.storyboard */,
+				BB8C843018381DE700E38983 /* MasterViewController.h */,
+				BB8C843118381DE700E38983 /* MasterViewController.m */,
+				BB8C843318381DE700E38983 /* DetailViewController.h */,
+				BB8C843418381DE700E38983 /* DetailViewController.m */,
+				BB8C843618381DE700E38983 /* Images.xcassets */,
+				BB8C841F18381DE700E38983 /* Supporting Files */,
+			);
+			path = PunchQuestApp;
+			sourceTree = "<group>";
+		};
+		BB8C841F18381DE700E38983 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C842018381DE700E38983 /* PunchQuestApp-Info.plist */,
+				BB8C842118381DE700E38983 /* InfoPlist.strings */,
+				BB8C842418381DE700E38983 /* main.m */,
+				BB8C842618381DE700E38983 /* PunchQuestApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB8C844318381DE700E38983 /* PunchQuestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C844918381DE700E38983 /* PunchQuestAppTests.m */,
+				BB8C844418381DE700E38983 /* Supporting Files */,
+			);
+			path = PunchQuestAppTests;
+			sourceTree = "<group>";
+		};
+		BB8C844418381DE700E38983 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB8C844518381DE700E38983 /* PunchQuestAppTests-Info.plist */,
+				BB8C844618381DE700E38983 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB8C841418381DE700E38983 /* PunchQuestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB8C844D18381DE700E38983 /* Build configuration list for PBXNativeTarget "PunchQuestApp" */;
+			buildPhases = (
+				BB8C841118381DE700E38983 /* Sources */,
+				BB8C841218381DE700E38983 /* Frameworks */,
+				BB8C841318381DE700E38983 /* Resources */,
+				50524F424C454D533F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PunchQuestApp;
+			productName = PunchQuestApp;
+			productReference = BB8C841518381DE700E38983 /* PunchQuestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB8C843B18381DE700E38983 /* PunchQuestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB8C845018381DE700E38983 /* Build configuration list for PBXNativeTarget "PunchQuestAppTests" */;
+			buildPhases = (
+				BB8C843818381DE700E38983 /* Sources */,
+				BB8C843918381DE700E38983 /* Frameworks */,
+				BB8C843A18381DE700E38983 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB8C844218381DE700E38983 /* PBXTargetDependency */,
+			);
+			name = PunchQuestAppTests;
+			productName = PunchQuestAppTests;
+			productReference = BB8C843C18381DE700E38983 /* PunchQuestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB8C840D18381DE700E38983 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Simon;
+				TargetAttributes = {
+					BB8C843B18381DE700E38983 = {
+						TestTargetID = BB8C841418381DE700E38983;
+					};
+				};
+			};
+			buildConfigurationList = BB8C841018381DE700E38983 /* Build configuration list for PBXProject "PunchQuestApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB8C840C18381DE700E38983;
+			productRefGroup = BB8C841618381DE700E38983 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB8C841418381DE700E38983 /* PunchQuestApp */,
+				BB8C843B18381DE700E38983 /* PunchQuestAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB8C841318381DE700E38983 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8C842F18381DE700E38983 /* Main_iPad.storyboard in Resources */,
+				BB8C843718381DE700E38983 /* Images.xcassets in Resources */,
+				BB8C842C18381DE700E38983 /* Main_iPhone.storyboard in Resources */,
+				BB8C842318381DE700E38983 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8C843A18381DE700E38983 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8C844818381DE700E38983 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50524F424C454D533F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+
+/* Begin PBXSourcesBuildPhase section */
+		BB8C841118381DE700E38983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8C842918381DE700E38983 /* AppDelegate.m in Sources */,
+				BB8C843218381DE700E38983 /* MasterViewController.m in Sources */,
+				BB8C842518381DE700E38983 /* main.m in Sources */,
+				BB8C843518381DE700E38983 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8C843818381DE700E38983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8C844A18381DE700E38983 /* PunchQuestAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB8C844218381DE700E38983 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB8C841418381DE700E38983 /* PunchQuestApp */;
+			targetProxy = BB8C844118381DE700E38983 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB8C842118381DE700E38983 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB8C842218381DE700E38983 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BB8C842A18381DE700E38983 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB8C842B18381DE700E38983 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		BB8C842D18381DE700E38983 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB8C842E18381DE700E38983 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		BB8C844618381DE700E38983 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB8C844718381DE700E38983 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB8C844B18381DE700E38983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB8C844C18381DE700E38983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB8C844E18381DE700E38983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PunchQuestApp/PunchQuestApp-Prefix.pch";
+				INFOPLIST_FILE = "PunchQuestApp/PunchQuestApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BB8C844F18381DE700E38983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PunchQuestApp/PunchQuestApp-Prefix.pch";
+				INFOPLIST_FILE = "PunchQuestApp/PunchQuestApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BB8C845118381DE700E38983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PunchQuestApp.app/PunchQuestApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PunchQuestApp/PunchQuestApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PunchQuestAppTests/PunchQuestAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BB8C845218381DE700E38983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PunchQuestApp.app/PunchQuestApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PunchQuestApp/PunchQuestApp-Prefix.pch";
+				INFOPLIST_FILE = "PunchQuestAppTests/PunchQuestAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB8C841018381DE700E38983 /* Build configuration list for PBXProject "PunchQuestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8C844B18381DE700E38983 /* Debug */,
+				BB8C844C18381DE700E38983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB8C844D18381DE700E38983 /* Build configuration list for PBXNativeTarget "PunchQuestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8C844E18381DE700E38983 /* Debug */,
+				BB8C844F18381DE700E38983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB8C845018381DE700E38983 /* Build configuration list for PBXNativeTarget "PunchQuestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8C845118381DE700E38983 /* Debug */,
+				BB8C845218381DE700E38983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB8C840D18381DE700E38983 /* Project object */;
+}
