@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Simon. All rights reserved.
 //
 
+#import "User.h"
 #import <UIKit/UIKit.h>
 
 @interface RequestDetailsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *activityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UIPickerView *groupNumberPicker;
+@property (strong, nonatomic) User *user;
 
 - (IBAction)sendRequestPressed:(UIButton *)sender;
 

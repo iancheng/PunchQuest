@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "User.h"
 #import <RestKit/RestKit.h>
 //#import <Parse/Parse.h>
 
@@ -36,9 +37,12 @@
 //    [RKManagedObjectStore setDefaultStore:managedObjectStore];
 
     
+<<<<<<< HEAD
     
     
     
+=======
+>>>>>>> c90da64146da20310abc54e58a82a2a8708a62aa
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
