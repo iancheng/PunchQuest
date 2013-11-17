@@ -8,7 +8,7 @@
 
 #import "RequestActivityViewController.h"
 
-#define phpLink @"http://www.rent2play.ca/testing/api/locations"
+#define phpLink @"http://www.rent2play.ca/testing/api/activities"
 
 @implementation RequestActivityViewController
 
@@ -43,8 +43,32 @@
 //    int counter = 0;
 //    NSMutableArray *json2 = [[NSMutableArray alloc] init];
     
-    for (NSDictionary *dict in json) { //3
-        NSLog(@"array: %@", dict);
+    NSString* baseURL = @"http://www.rent2play.ca/testing/images/";
+    
+    NSLog(@"buttons: %@", [self activityButtonsCollection]);
+    NSLog(@"json: %@", json);
+    
+    for (NSDictionary *dict in json) {
+        NSString* imgURL = [baseURL stringByAppendingString:[dict objectForKey:(@"imgURL")]];
+        
+        NSLog(@"imgurl: %@", imgURL);
+
+    }
+    
+//    for(UIButton *button in [self activityButtonsCollection]) {
+//        [button setTitle:[json objectAtIndex:] forState:UIControlStateNormal];
+//    }
+    
+    for(int i=0;i<[[self activityButtonsCollection] count];i++) {
+        UIButton *button = [[self activityButtonsCollection] objectAtIndex:i];
+        NSDictionary *dict = [json objectAtIndex:i];
+        [button setTitle:[dict objectForKey:@"name"] forState:(UIControlStateNormal)];
+        
+        NSString* imgURL = [baseURL stringByAppendingString:[dict objectForKey:(@"imgURL")]];
+        
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgURL]]];
+        
+        [button setBackgroundImage:image forState:(UIControlStateNormal)];
         
     }
 }
