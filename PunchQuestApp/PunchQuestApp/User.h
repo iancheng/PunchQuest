@@ -12,6 +12,7 @@
     NSString *location;
     NSString *activity;
     int numPeople;
+    int requestID;
 }
 
 //@property NSString *location, *activity;
@@ -25,5 +26,8 @@
 
 - (void)setNumPeople:(int)num;
 - (int)getNumPeople;
+
+- (void)setRequestID:(int)num;
+- (int)getRequestID;
 
 @end

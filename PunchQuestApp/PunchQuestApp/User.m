@@ -31,5 +31,12 @@
     return numPeople;
 }
 
+- (void)setRequestID:(int)num {
+    requestID = num;
+}
+- (int)getRequestID {
+    return requestID;
+}
+
 
 @end

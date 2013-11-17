@@ -56,5 +56,20 @@
 }
 
 - (IBAction)sendRequestPressed:(UIButton *)sender {
+    NSString *requestURL = [NSString stringWithFormat: @"http://www.rent2play.ca/testing/api/Simon/%@/%@/%@", [user getLocation], [user getActivity], [user getNumPeople]];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:requestURL]];
+        [self performSelectorOnMainThread:@selector(fetchedData:)
+                               withObject:data waitUntilDone:YES];
+    });
 }
+
+- (void)fetchedData:(NSData *)responseData {
+    NSArray* json = [NSJSONSerialization
+                     JSONObjectWithData:responseData //1
+                     options:kNilOptions error:nil];
+    
+    
+}
+
 @end
