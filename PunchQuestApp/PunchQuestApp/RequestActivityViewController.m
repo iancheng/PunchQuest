@@ -16,7 +16,9 @@
 
 - (IBAction)activityPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"detailsSegue" sender:sender];
-//    [user setActivity:[sender titleLabel]];
+    [user setActivity:sender.currentTitle];
+    NSLog(@"location: %@", [user getLocation]);
+    NSLog(@"activity: %@", [user getActivity]);
 }
 
 - (void)viewDidLoad
