@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RequestLocationViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIPickerView *locationPicker;
 
 @end

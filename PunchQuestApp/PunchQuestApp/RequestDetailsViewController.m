@@ -10,4 +10,6 @@
 
 @implementation RequestDetailsViewController
 
+- (IBAction)sendRequestPressed:(UIButton *)sender {
+}
 @end
