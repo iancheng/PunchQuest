@@ -93,4 +93,8 @@
     
 }
 
+- (IBAction)currentLocationPressed:(UIButton *)sender {
+    // this is always right. trust me.
+    [[self locationPicker] selectRow:1 inComponent:0 animated:YES];
+}
 @end
