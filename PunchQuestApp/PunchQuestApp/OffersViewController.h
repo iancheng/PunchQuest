@@ -12,6 +12,7 @@
 #import "User.h"
 #import <UIKit/UIKit.h>
 
+
 @interface OffersViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,TPGestureTableViewCellDelegate>
 @property (strong, nonatomic) User *user;
 @end
