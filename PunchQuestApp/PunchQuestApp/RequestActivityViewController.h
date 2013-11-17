@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RequestActivityViewController : UIViewController
+
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *activityButtonsCollection;
 - (IBAction)activityPressed:(UIButton *)sender;
 
