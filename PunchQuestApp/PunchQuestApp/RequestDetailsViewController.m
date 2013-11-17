@@ -12,6 +12,8 @@
 
 @implementation RequestDetailsViewController
 
+@synthesize user;
+
 
 #pragma mark - UIPickerView DataSource
 // returns the number of 'columns' to display.
@@ -51,6 +53,9 @@
     
     [self groupNumberPicker].delegate = self;
     [self groupNumberPicker].dataSource = self;
+    
+    [self activityLabel].text = [user getActivity];
+    [self locationLabel].text = [user getLocation];
     
     
 }

@@ -7,6 +7,7 @@
 //
 
 #import "RequestActivityViewController.h"
+#import "RequestDetailsViewController.h"
 
 #define phpLink @"http://www.rent2play.ca/testing/api/activities"
 
@@ -19,6 +20,11 @@
     [user setActivity:sender.currentTitle];
     NSLog(@"location: %@", [user getLocation]);
     NSLog(@"activity: %@", [user getActivity]);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    RequestDetailsViewController *destViewController = segue.destinationViewController;
+    destViewController.user = user;
 }
 
 - (void)viewDidLoad
