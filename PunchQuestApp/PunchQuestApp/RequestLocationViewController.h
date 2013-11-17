@@ -15,5 +15,6 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIPickerView *locationPicker;
+- (IBAction)currentLocationPressed:(UIButton *)sender;
 
 @end
