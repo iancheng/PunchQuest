@@ -24,10 +24,8 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"RequestActivityView"]) {
-        RequestActivityViewController *destViewController = segue.destinationViewController;
-        destViewController.user = user;
-    }
+    RequestActivityViewController *destViewController = segue.destinationViewController;
+    destViewController.user = user;
 }
 
 
