@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--Request Location View Controller - 1. Where are you going?-->
+        <!--Request Location View Controller - Rent2Play Discovery App-->
         <scene sceneID="lLt-LB-oAk">
             <objects>
                 <viewController id="5ee-Nl-YxQ" customClass="RequestLocationViewController" sceneMemberID="viewController">
@@ -37,20 +37,23 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIR-kG-GIH">
-                                        <rect key="frame" x="87" y="40" width="146" height="30"/>
+                                        <rect key="frame" x="87" y="54" width="146" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Use Current Location">
+                                            <color key="titleColor" red="0.95686274509803915" green="0.21176470588235294" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9b3-xh-MDD">
-                                        <rect key="frame" x="0.0" y="100" width="320" height="162"/>
+                                        <rect key="frame" x="0.0" y="122" width="320" height="162"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-1I-iRd">
-                                        <rect key="frame" x="137" y="350" width="32" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-1I-iRd">
+                                        <rect key="frame" x="129" y="328" width="62" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.95686274509803915" green="0.21176470588235294" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -58,13 +61,24 @@
                                             <segue destination="t8f-bL-TYe" kind="push" id="0tr-0B-W3u"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Where are you going?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAh-jY-jwZ">
+                                        <rect key="frame" x="30" y="15" width="261" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94117647059999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="9b3-xh-MDD" secondAttribute="centerY" constant="27" id="352-VJ-RML"/>
+                                    <constraint firstAttribute="centerX" secondItem="d5M-1I-iRd" secondAttribute="centerX" id="0wY-Nb-Lep"/>
+                                    <constraint firstAttribute="centerY" secondItem="9b3-xh-MDD" secondAttribute="centerY" constant="5" id="352-VJ-RML"/>
+                                    <constraint firstAttribute="centerX" secondItem="lAh-jY-jwZ" secondAttribute="centerX" id="4C7-QZ-gyX"/>
                                     <constraint firstAttribute="centerX" secondItem="GIR-kG-GIH" secondAttribute="centerX" id="DRs-ke-xeJ"/>
+                                    <constraint firstItem="lAh-jY-jwZ" firstAttribute="top" secondItem="Nc3-vO-oeF" secondAttribute="top" constant="15" id="OeS-i7-EEL"/>
+                                    <constraint firstItem="GIR-kG-GIH" firstAttribute="top" secondItem="lAh-jY-jwZ" secondAttribute="bottom" constant="15" id="RU2-sX-EM6"/>
                                     <constraint firstAttribute="trailing" secondItem="9b3-xh-MDD" secondAttribute="trailing" id="Wgp-PG-OSO"/>
-                                    <constraint firstItem="GIR-kG-GIH" firstAttribute="top" secondItem="Nc3-vO-oeF" secondAttribute="top" constant="40" id="bVK-MQ-EG1"/>
+                                    <constraint firstAttribute="bottom" secondItem="d5M-1I-iRd" secondAttribute="bottom" constant="40" id="fkI-pB-Ruk"/>
                                     <constraint firstItem="9b3-xh-MDD" firstAttribute="leading" secondItem="Nc3-vO-oeF" secondAttribute="leading" id="kaT-a7-Kwb"/>
                                 </constraints>
                             </view>
@@ -77,7 +91,7 @@
                             <constraint firstItem="Nc3-vO-oeF" firstAttribute="top" secondItem="pBy-Rs-G6A" secondAttribute="bottom" id="ixv-lH-3wN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="1. Where are you going?" id="QsP-cs-cS5"/>
+                    <navigationItem key="navigationItem" title="Rent2Play Discovery App" id="QsP-cs-cS5"/>
                     <connections>
                         <outlet property="locationPicker" destination="9b3-xh-MDD" id="6AS-xW-vas"/>
                     </connections>
@@ -175,6 +189,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.62745098039215685" green="0.84705882352941175" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -264,20 +279,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" text="Activity Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCJ-Sa-yDd">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" text="Activity Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCJ-Sa-yDd">
                                 <rect key="frame" x="20" y="104" width="118" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ9-Mg-dTo">
-                                <rect key="frame" x="143" y="101" width="33" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="@" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ9-Mg-dTo">
+                                <rect key="frame" x="143" y="101" width="20" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Location Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnz-jV-rQ6">
-                                <rect key="frame" x="181" y="105" width="119" height="22"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Location Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnz-jV-rQ6">
+                                <rect key="frame" x="168" y="105" width="132" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="highlightedColor"/>
@@ -293,6 +308,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Send My Request!">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.21176470589999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -364,7 +380,7 @@
                             <constraint firstAttribute="trailing" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="20" symbolic="YES" id="pXB-RP-Zz6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Response List" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="4. Response List" id="cra-N8-TIN"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="Lei-5M-9Gs" id="sCT-F7-F6f"/>
                     </connections>
