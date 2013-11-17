@@ -7,45 +7,54 @@
 //
 
 #import "OffersViewController.h"
+#import "TPGestureTableViewCell.h"
+#import "TPDataModel.h"
 
 @interface OffersViewController ()
-@property (strong, nonatomic) UIPopoverController *masterPopoverController;
-- (void)configureView;
+@property (nonatomic,retain) UITableView *myTableView;
+@property (nonatomic,retain) NSMutableArray *dataArray;
+@property (nonatomic,retain) TPGestureTableViewCell *currentCell;
 @end
 
 @implementation OffersViewController
 
-#pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-
-    if (self.masterPopoverController != nil) {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+-(void)dealloc{
+    self.myTableView=nil;
+    self.dataArray=nil;
+    self.currentCell=nil;
 }
 
-- (void)configureView
-{
-    // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+    NSString *path=[[NSBundle mainBundle] pathForResource:@"TableViewData" ofType:@"plist"];
+    _dataArray = [[NSMutableArray alloc]init];
+    NSArray *sourceArray = [[NSArray alloc] initWithContentsOfFile:path];
+    
+    for(int i=0;i<[sourceArray count];i++){
+        NSDictionary *dict = [sourceArray objectAtIndex:i];
+        TPDataModel *item = [[TPDataModel alloc]init];
+        item.title = [dict objectForKey:@"Title"];
+        item.detail = [dict objectForKey:@"Detail"];
+        item.isExpand=NO;
+        [_dataArray addObject:item];
+    }
+    
+	_myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0,
+                                                                self.view.frame.size.width,
+                                                                self.view.frame.size.height)];
+    _myTableView.delegate=self;
+    _myTableView.dataSource=self;
+    _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _myTableView.backgroundColor=[UIColor darkGrayColor];
+    [self.view addSubview:_myTableView];
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -53,20 +62,78 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Split view
 
-- (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
-{
-    barButtonItem.title = NSLocalizedString(@"Master", @"Master");
-    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
-    self.masterPopoverController = popoverController;
+#pragma mark
+#pragma mark UITableViewDatasource
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TPDataModel *item=(TPDataModel*)[_dataArray objectAtIndex:indexPath.row];
+    if(item.isExpand==NO){
+        return 60;
+    }
+    return 100;
 }
 
-- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
-{
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
-    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
-    self.masterPopoverController = nil;
+
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
+
+
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [_dataArray count];
+}
+
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *cellIdentifier = @"LomemoBasicCell";
+    TPGestureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[TPGestureTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.delegate=self;
+    }
+    TPDataModel *item=(TPDataModel*)[_dataArray objectAtIndex:indexPath.row];
+    cell.itemData=item;
+    return cell;
+}
+
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TPGestureTableViewCell *cell = (TPGestureTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+    if(cell.revealing==YES){
+        cell.revealing=NO;
+        return;
+    }
+    TPDataModel *item=(TPDataModel*)[_dataArray objectAtIndex:indexPath.row];
+    item.isExpand=!item.isExpand;
+    cell.itemData=item;
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+
+#pragma mark
+#pragma mark TPGestureTableViewCellDelegate
+- (void)cellDidBeginPan:(TPGestureTableViewCell *)cell{
+    
+}
+
+- (void)cellDidReveal:(TPGestureTableViewCell *)cell{
+    if(self.currentCell!=cell){
+        self.currentCell.revealing=NO;
+        self.currentCell=cell;
+    }
+    
+}
+
+
 
 @end

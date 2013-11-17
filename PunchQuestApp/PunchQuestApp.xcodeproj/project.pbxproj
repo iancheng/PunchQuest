@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0DD4031839083200A4ADB2 /* TPGestureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0DD4021839083200A4ADB2 /* TPGestureTableViewCell.m */; };
+		BB0DD4061839085D00A4ADB2 /* TPDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0DD4051839085D00A4ADB2 /* TPDataModel.m */; };
+		BB0DD40818390AD700A4ADB2 /* TableViewData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB0DD40718390AD700A4ADB2 /* TableViewData.plist */; };
 		BB1037FA1838462400A9DE84 /* RequestLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1037F91838462400A9DE84 /* RequestLocationViewController.m */; };
 		BB1037FD18384C0D00A9DE84 /* RequestActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1037FC18384C0D00A9DE84 /* RequestActivityViewController.m */; };
 		BB10380018384C7400A9DE84 /* RequestDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1037FF18384C7400A9DE84 /* RequestDetailsViewController.m */; };
@@ -90,6 +93,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB0DD4011839083200A4ADB2 /* TPGestureTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPGestureTableViewCell.h; sourceTree = "<group>"; };
+		BB0DD4021839083200A4ADB2 /* TPGestureTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPGestureTableViewCell.m; sourceTree = "<group>"; };
+		BB0DD4041839085D00A4ADB2 /* TPDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPDataModel.h; sourceTree = "<group>"; };
+		BB0DD4051839085D00A4ADB2 /* TPDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPDataModel.m; sourceTree = "<group>"; };
+		BB0DD40718390AD700A4ADB2 /* TableViewData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TableViewData.plist; sourceTree = "<group>"; };
 		BB1037F81838462400A9DE84 /* RequestLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestLocationViewController.h; sourceTree = "<group>"; };
 		BB1037F91838462400A9DE84 /* RequestLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestLocationViewController.m; sourceTree = "<group>"; };
 		BB1037FB18384C0D00A9DE84 /* RequestActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestActivityViewController.h; sourceTree = "<group>"; };
@@ -172,6 +180,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB0DD4001839083200A4ADB2 /* TPGestureTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BB0DD4011839083200A4ADB2 /* TPGestureTableViewCell.h */,
+				BB0DD4021839083200A4ADB2 /* TPGestureTableViewCell.m */,
+			);
+			path = TPGestureTableViewCell;
+			sourceTree = "<group>";
+		};
 		BB8C840C18381DE700E38983 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +234,9 @@
 		BB8C841E18381DE700E38983 /* PunchQuestApp */ = {
 			isa = PBXGroup;
 			children = (
+				BB0DD4041839085D00A4ADB2 /* TPDataModel.h */,
+				BB0DD4051839085D00A4ADB2 /* TPDataModel.m */,
+				BB0DD4001839083200A4ADB2 /* TPGestureTableViewCell */,
 				BB8C842718381DE700E38983 /* AppDelegate.h */,
 				BB8C842818381DE700E38983 /* AppDelegate.m */,
 				BB8C842A18381DE700E38983 /* Main_iPhone.storyboard */,
@@ -240,6 +260,7 @@
 		BB8C841F18381DE700E38983 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BB0DD40718390AD700A4ADB2 /* TableViewData.plist */,
 				BB5DC1A21838C46400ECA213 /* Default-568h@2x.png */,
 				BB5DC19E1838B9D700ECA213 /* Icon.png */,
 				BB5DC19F1838B9D700ECA213 /* Icon@2x.png */,
@@ -397,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB0DD40818390AD700A4ADB2 /* TableViewData.plist in Resources */,
 				BB5DC1A01838B9D700ECA213 /* Icon.png in Resources */,
 				BB8C842F18381DE700E38983 /* Main_iPad.storyboard in Resources */,
 				BB5DC1A11838B9D700ECA213 /* Icon@2x.png in Resources */,
@@ -442,7 +464,9 @@
 				BB1037FA1838462400A9DE84 /* RequestLocationViewController.m in Sources */,
 				F1BEEFF118387384006EAAEB /* User.m in Sources */,
 				BB8C842918381DE700E38983 /* AppDelegate.m in Sources */,
+				BB0DD4061839085D00A4ADB2 /* TPDataModel.m in Sources */,
 				BB8C842518381DE700E38983 /* main.m in Sources */,
+				BB0DD4031839083200A4ADB2 /* TPGestureTableViewCell.m in Sources */,
 				BB8C843518381DE700E38983 /* OffersViewController.m in Sources */,
 				BB1037FD18384C0D00A9DE84 /* RequestActivityViewController.m in Sources */,
 				F1BEEFF4183884FB006EAAEB /* Location.xcdatamodeld in Sources */,

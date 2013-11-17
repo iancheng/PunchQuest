@@ -346,7 +346,7 @@
                         <outlet property="activityLabel" destination="BCJ-Sa-yDd" id="Ve4-Xs-L6e"/>
                         <outlet property="groupNumberPicker" destination="1tD-E6-VsC" id="MNE-7B-L1i"/>
                         <outlet property="locationLabel" destination="Dnz-jV-rQ6" id="AOu-Ui-nWt"/>
-                        <segue destination="Ah7-4n-0Wa" kind="push" id="LuL-IP-On4"/>
+                        <segue destination="Ah7-4n-0Wa" kind="push" identifier="offersSegue" id="LuL-IP-On4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3P-3I-a6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -6,11 +6,10 @@
 //  Copyright (c) 2013 Simon. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface OffersViewController : UIViewController <UISplitViewControllerDelegate>
+#import <Foundation/Foundation.h>
+#import "TPGestureTableViewCell.h"
 
-@property (strong, nonatomic) id detailItem;
+@interface OffersViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,TPGestureTableViewCellDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

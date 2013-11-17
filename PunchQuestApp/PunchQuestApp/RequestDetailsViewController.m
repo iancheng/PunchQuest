@@ -69,11 +69,14 @@
     
     requestURL = [requestURL stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
 //    NSLog(requestURL);
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:requestURL]];
-        [self performSelectorOnMainThread:@selector(fetchedData:)
-                               withObject:data waitUntilDone:YES];
-    });
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:requestURL]];
+//        [self performSelectorOnMainThread:@selector(fetchedData:)
+//                               withObject:data waitUntilDone:YES];
+//    });
+    
+    
+    [self performSegueWithIdentifier:@"offersSegue" sender:sender];
 }
 
 - (void)fetchedData:(NSData *)responseData {
