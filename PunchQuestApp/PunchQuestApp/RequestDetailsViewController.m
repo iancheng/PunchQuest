@@ -61,7 +61,14 @@
 }
 
 - (IBAction)sendRequestPressed:(UIButton *)sender {
-    NSString *requestURL = [NSString stringWithFormat: @"http://www.rent2play.ca/testing/api/Simon/%@/%@/%@", [user getLocation], [user getActivity], [user getNumPeople]];
+    int row = [[self groupNumberPicker] selectedRowInComponent:0];
+    NSLog(@"numPeople: %d", row+PICKER_MIN);
+    [user setNumPeople: row+PICKER_MIN];
+    
+    NSString *requestURL = [NSString stringWithFormat: @"http://www.rent2play.ca/testing/api/requests/add/Simon/%@/%@/%@", [user getLocation], [user getActivity], [NSString stringWithFormat:@"%d", [user getNumPeople]]];
+    
+    requestURL = [requestURL stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+//    NSLog(requestURL);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:requestURL]];
         [self performSelectorOnMainThread:@selector(fetchedData:)
@@ -73,7 +80,13 @@
     NSArray* json = [NSJSONSerialization
                      JSONObjectWithData:responseData //1
                      options:kNilOptions error:nil];
+    NSLog(@"json: %@", json);
     
+    for(NSDictionary *dict in json) {
+        [user setRequestID: [[dict objectForKey:(@"id")] intValue]];
+    }
+    
+    NSLog(@"requestID: %d", [user getRequestID]);
     
 }
 
