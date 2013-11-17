@@ -76,7 +76,7 @@
 
 - (void) endSearch {
     [_ptr endRefresh];
-    [self.table reloadData];
+    [self.table reloadData]; //use this to reloadtable?
 }
 
 #pragma mark - UITableView Delegate Methods

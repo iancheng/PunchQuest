@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "TPGestureTableViewCell.h"
 
+
 @interface OffersViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,TPGestureTableViewCellDelegate>
 
 @end
