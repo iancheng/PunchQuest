@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RequestDetailsViewController : UIViewController
+@interface RequestDetailsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+    NSMutableArray *dataArray;
+}
 @property (weak, nonatomic) IBOutlet UILabel *activityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UIPickerView *groupNumberPicker;

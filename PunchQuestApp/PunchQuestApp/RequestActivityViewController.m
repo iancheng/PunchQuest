@@ -13,6 +13,7 @@
 @implementation RequestActivityViewController
 
 - (IBAction)activityPressed:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"detailsSegue" sender:sender];
 }
 
 - (void)viewDidLoad
