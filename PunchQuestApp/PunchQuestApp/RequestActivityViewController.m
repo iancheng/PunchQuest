@@ -10,4 +10,6 @@
 
 @implementation RequestActivityViewController
 
+- (IBAction)activityPressed:(UIButton *)sender {
+}
 @end
