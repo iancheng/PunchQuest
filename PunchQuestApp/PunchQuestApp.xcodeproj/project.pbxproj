@@ -11,6 +11,9 @@
 		BB1037FD18384C0D00A9DE84 /* RequestActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1037FC18384C0D00A9DE84 /* RequestActivityViewController.m */; };
 		BB10380018384C7400A9DE84 /* RequestDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1037FF18384C7400A9DE84 /* RequestDetailsViewController.m */; };
 		BB5DC19A1838A23D00ECA213 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5DC1991838A23D00ECA213 /* Default@2x.png */; };
+		BB5DC1A01838B9D700ECA213 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5DC19E1838B9D700ECA213 /* Icon.png */; };
+		BB5DC1A11838B9D700ECA213 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5DC19F1838B9D700ECA213 /* Icon@2x.png */; };
+		BB5DC1A31838C46400ECA213 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5DC1A21838C46400ECA213 /* Default-568h@2x.png */; };
 		BB8C841918381DE700E38983 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C841818381DE700E38983 /* Foundation.framework */; };
 		BB8C841B18381DE700E38983 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C841A18381DE700E38983 /* CoreGraphics.framework */; };
 		BB8C841D18381DE700E38983 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8C841C18381DE700E38983 /* UIKit.framework */; };
@@ -89,6 +92,9 @@
 		BB1037FE18384C7400A9DE84 /* RequestDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDetailsViewController.h; sourceTree = "<group>"; };
 		BB1037FF18384C7400A9DE84 /* RequestDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDetailsViewController.m; sourceTree = "<group>"; };
 		BB5DC1991838A23D00ECA213 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Images.xcassets/LaunchImage.launchimage/Default@2x.png"; sourceTree = "<group>"; };
+		BB5DC19E1838B9D700ECA213 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Images.xcassets/AppIcon.appiconset/Icon.png; sourceTree = "<group>"; };
+		BB5DC19F1838B9D700ECA213 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Images.xcassets/AppIcon.appiconset/Icon@2x.png"; sourceTree = "<group>"; };
+		BB5DC1A21838C46400ECA213 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Images.xcassets/LaunchImage.launchimage/Default-568h@2x.png"; sourceTree = "<group>"; };
 		BB8C841518381DE700E38983 /* PunchQuestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunchQuestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8C841818381DE700E38983 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BB8C841A18381DE700E38983 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -216,6 +222,9 @@
 		BB8C841F18381DE700E38983 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BB5DC1A21838C46400ECA213 /* Default-568h@2x.png */,
+				BB5DC19E1838B9D700ECA213 /* Icon.png */,
+				BB5DC19F1838B9D700ECA213 /* Icon@2x.png */,
 				BB5DC1991838A23D00ECA213 /* Default@2x.png */,
 				BB8C842018381DE700E38983 /* PunchQuestApp-Info.plist */,
 				BB8C842118381DE700E38983 /* InfoPlist.strings */,
@@ -370,9 +379,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5DC1A01838B9D700ECA213 /* Icon.png in Resources */,
 				BB8C842F18381DE700E38983 /* Main_iPad.storyboard in Resources */,
+				BB5DC1A11838B9D700ECA213 /* Icon@2x.png in Resources */,
 				BB8C843718381DE700E38983 /* Images.xcassets in Resources */,
 				BB5DC19A1838A23D00ECA213 /* Default@2x.png in Resources */,
+				BB5DC1A31838C46400ECA213 /* Default-568h@2x.png in Resources */,
 				BB8C842C18381DE700E38983 /* Main_iPhone.storyboard in Resources */,
 				BB8C842318381DE700E38983 /* InfoPlist.strings in Resources */,
 			);
@@ -556,7 +568,6 @@
 		BB8C844E18381DE700E38983 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PunchQuestApp/PunchQuestApp-Prefix.pch";
@@ -575,7 +586,6 @@
 		BB8C844F18381DE700E38983 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PunchQuestApp/PunchQuestApp-Prefix.pch";

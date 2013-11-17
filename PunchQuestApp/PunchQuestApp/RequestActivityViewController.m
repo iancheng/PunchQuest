@@ -64,12 +64,13 @@
         UIButton *button = [[self activityButtonsCollection] objectAtIndex:i];
         NSDictionary *dict = [json objectAtIndex:i];
         [button setTitle:[dict objectForKey:@"name"] forState:(UIControlStateNormal)];
+        button.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
         
         NSString* imgURL = [baseURL stringByAppendingString:[dict objectForKey:(@"imgURL")]];
         
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgURL]]];
         
-        [button setBackgroundImage:image forState:(UIControlStateNormal)];
+        [button setImage:image forState:(UIControlStateNormal)];
         
     }
 }
