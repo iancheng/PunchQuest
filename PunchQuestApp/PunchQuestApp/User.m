@@ -10,4 +10,26 @@
 
 @implementation User
 
+- (void)setLocation:(NSString *)loc {
+    location = loc;
+}
+- (NSString*)getLocation {
+    return location;
+}
+
+- (void)setActivity:(NSString *)act {
+    activity = act;
+}
+- (NSString*)getActivity {
+    return activity;
+}
+
+- (void)setNumPeople:(int)num {
+    numPeople = num;
+}
+- (int)getNumPeople {
+    return numPeople;
+}
+
+
 @end

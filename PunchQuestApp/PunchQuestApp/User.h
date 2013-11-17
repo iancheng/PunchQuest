@@ -14,7 +14,16 @@
     int numPeople;
 }
 
-@property NSString *location, *activity;
-@property int numPeople;
+//@property NSString *location, *activity;
+//@property int numPeople;
+
+- (void)setLocation:(NSString *)location;
+- (NSString*)getLocation;
+
+- (void)setActivity:(NSString *)activity;
+- (NSString*)getActivity;
+
+- (void)setNumPeople:(int)num;
+- (int)getNumPeople;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "User.h"
 #import <RestKit/RestKit.h>
 
 @implementation AppDelegate
@@ -33,12 +34,6 @@
 //    
 //    // Set the default store shared instance
 //    [RKManagedObjectStore setDefaultStore:managedObjectStore];
-
-    
-    
-    
-    
-    
 
     
     // Override point for customization after application launch.

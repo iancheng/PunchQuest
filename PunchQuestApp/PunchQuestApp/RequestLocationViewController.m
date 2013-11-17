@@ -7,10 +7,30 @@
 //
 
 #import "RequestLocationViewController.h"
+#import "RequestActivityViewController.h"
 
 @implementation RequestLocationViewController
-- (IBAction)nextPressed:(id)sender {
+- (User *)user {
+    if(!user) {
+        user = [[User alloc] init];
+    }
+    return user;
 }
+
+- (IBAction)nextPressed:(id)sender {
+    int row = [[self locationPicker] selectedRowInComponent:0];
+    [user setLocation:[dataArray objectAtIndex:row]];
+    NSLog(@"location: %@", [user getLocation]);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"RequestActivityView"]) {
+        RequestLocationViewController *destViewController = segue.destinationViewController;
+//        destViewController.user = user;
+    }
+}
+
+
 
 #pragma mark - UIPickerView DataSource
 // returns the number of 'columns' to display.
@@ -41,15 +61,19 @@
 {
     //Let's print in the console what the user had chosen;
 //    NSLog(@"Chosen item: %@", [dataArray objectAtIndex:row]);
+    
 }
 
 - (void)viewDidLoad {
+    [self user];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.rent2play.ca/testing/api/locations"]];
         [self performSelectorOnMainThread:@selector(fetchedData:)
                                withObject:data waitUntilDone:YES];
     });
+    
+    
 
     
 }
