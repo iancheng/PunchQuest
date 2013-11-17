@@ -10,6 +10,10 @@
 
 @implementation RequestDetailsViewController
 
+- (void)viewDidLoad {
+    [self.groupNumberPicker].
+}
+
 - (IBAction)sendRequestPressed:(UIButton *)sender {
 }
 @end
