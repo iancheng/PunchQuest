@@ -32,16 +32,21 @@
 {
     [super viewDidLoad];
 
+    [self refreshTableData];
     
-//    NSString *phpLink = [NSString stringWithFormat: @"http://www.rent2play.ca/testing/api/responses/%d", [user getRequestID]];
-    NSString *phpLink = [NSString stringWithFormat: @"http://www.rent2play.ca/testing/api/responses/%d", 1];
+   
+    
+	
+}
+
+- (void)refreshTableData {
+     NSString *phpLink = [NSString stringWithFormat: @"http://www.rent2play.ca/testing/api/responses/%d", [user getRequestID]];
+//    NSString *phpLink = [NSString stringWithFormat: @"http://www.rent2play.ca/testing/api/responses/%d", 1];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:phpLink]];
         [self performSelectorOnMainThread:@selector(fetchedData:)
                                withObject:data waitUntilDone:YES];
     });
-
-	
 }
 
 - (void)fetchedData:(NSData *)responseData {
@@ -69,7 +74,7 @@
     
     _myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,60,
                                                                 self.view.frame.size.width,
-                                                                self.view.frame.size.height/3)];
+                                                                self.view.frame.size.height/2)];
     _myTableView.delegate=self;
     _myTableView.dataSource=self;
     _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -78,6 +83,9 @@
     
 }
 
+- (IBAction)refreshPressed:(UIButton *)sender {
+    [self refreshTableData];
+}
 
 
 
@@ -162,7 +170,6 @@
     
     
 }
-
 
 
 @end

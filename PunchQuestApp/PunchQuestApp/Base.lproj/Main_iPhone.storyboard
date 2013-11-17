@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -364,7 +364,35 @@
                     <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDI-dJ-KAl">
+                                <rect key="frame" x="126" y="379" width="68" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.21176470589999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshPressed:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="6uH-Lf-18d"/>
+                                    <action selector="sendRequestPressed:" destination="ERm-zb-rKU" eventType="touchUpInside" id="P89-Ec-Vi9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awaiting responses from 5 vendors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFa-ea-W4Z">
+                                <rect key="frame" x="25" y="315" width="270" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pDI-dJ-KAl" firstAttribute="top" secondItem="vFa-ea-W4Z" secondAttribute="bottom" constant="43" id="Wum-B0-Wvd"/>
+                            <constraint firstItem="jWq-QS-Kaa" firstAttribute="top" secondItem="pDI-dJ-KAl" secondAttribute="bottom" constant="65" id="ing-yu-S3h"/>
+                            <constraint firstAttribute="centerX" secondItem="vFa-ea-W4Z" secondAttribute="centerX" id="tey-Nb-hAM"/>
+                            <constraint firstAttribute="centerX" secondItem="pDI-dJ-KAl" secondAttribute="centerX" id="zOj-F1-UTb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="4. Response List" id="cra-N8-TIN"/>
                 </viewController>
