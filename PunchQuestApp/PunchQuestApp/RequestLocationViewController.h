@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RequestLocationViewController : UIViewController
+@interface RequestLocationViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+    NSMutableArray *dataArray;
+}
+
 @property (weak, nonatomic) IBOutlet UIPickerView *locationPicker;
 
 @end
