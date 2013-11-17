@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <RestKit/RestKit.h>
+//#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -38,15 +39,18 @@
     
     
     
-    
-
-    
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
     }
+    
+//    [Parse setApplicationId:@"0L7CfyAXrcU93M9dyAeNeVah0GAcvCNlsQpZ29fy"
+//                  clientKey:@"XA52PhIHlzarKD5nXYEog6litsJENGc8oLNgj0jx"];
+//    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+
     return YES;
 }
 							
