@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pU2-7t-ZxG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -71,11 +71,12 @@
                     <connections>
                         <outlet property="LoginStatusLabel" destination="n4J-RL-hen" id="GEw-AY-HBi"/>
                         <outlet property="tokenLabel" destination="jNJ-ly-f2U" id="yTI-xa-qiw"/>
+                        <segue destination="rS3-R9-Ivy" kind="modal" identifier="LoginSuccessfulSegue" id="1SG-EH-GCc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WB7-wD-owf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-437" y="64"/>
+            <point key="canvasLocation" x="-538" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cUi-kZ-frf">
@@ -85,32 +86,92 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="RxB-wf-QIq"/>
+                        <segue destination="5ee-Nl-YxQ" kind="relationship" relationship="rootViewController" id="vPC-IV-zmO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--Create Request View Controller - Master-->
-        <scene sceneID="VgW-fR-Quf">
+        <!--Request Location View Controller - 1. Where are you going?-->
+        <scene sceneID="lLt-LB-oAk">
             <objects>
-                <tableViewController title="Master" id="pGg-6v-bdr" customClass="CreateRequestViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
+                <viewController id="5ee-Nl-YxQ" customClass="RequestLocationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pBy-Rs-G6A"/>
+                        <viewControllerLayoutGuide type="bottom" id="2eV-1j-HEB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nN0-mc-Lsc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="pGg-6v-bdr" id="P41-gY-KXY"/>
-                            <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1Y-MQ-cC8">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="W1Y-MQ-cC8" secondAttribute="trailing" id="4cR-NI-VJG"/>
+                            <constraint firstItem="W1Y-MQ-cC8" firstAttribute="top" secondItem="pBy-Rs-G6A" secondAttribute="bottom" id="DN3-tO-Tip"/>
+                            <constraint firstItem="2eV-1j-HEB" firstAttribute="top" secondItem="W1Y-MQ-cC8" secondAttribute="bottom" id="EMd-7J-fvj"/>
+                            <constraint firstItem="W1Y-MQ-cC8" firstAttribute="leading" secondItem="nN0-mc-Lsc" secondAttribute="leading" id="o6Q-vT-02j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="1. Where are you going?" id="QsP-cs-cS5"/>
+                    <connections>
+                        <segue destination="t8f-bL-TYe" kind="push" id="brr-f2-2NU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byA-ic-12w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="417" y="64"/>
+        </scene>
+        <!--Request Activity View Controller - 2. What do you want to do?-->
+        <scene sceneID="WQ4-zH-vlu">
+            <objects>
+                <viewController id="t8f-bL-TYe" customClass="RequestActivityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="54N-oq-NyE"/>
+                        <viewControllerLayoutGuide type="bottom" id="KH8-ae-i0F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V4I-o7-Dzj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="2. What do you want to do?" id="l5I-9d-pn2">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ko9-gM-mw0"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="ERm-zb-rKU" kind="push" id="wiL-b1-coq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aq0-cj-5ry" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="64"/>
+        </scene>
+        <!--Request Details View Controller - 3. Finalize Request Details-->
+        <scene sceneID="gmF-wN-b0V">
+            <objects>
+                <viewController id="ERm-zb-rKU" customClass="RequestDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rbE-qa-cQS"/>
+                        <viewControllerLayoutGuide type="bottom" id="oQX-fH-mkz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EgV-ef-1YS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="3. Finalize Request Details" id="COg-wr-eiX"/>
+                    <connections>
+                        <segue destination="Ah7-4n-0Wa" kind="push" id="LuL-IP-On4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3P-3I-a6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="64"/>
         </scene>
         <!--Offers View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -139,14 +200,14 @@
                             <constraint firstAttribute="trailing" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="20" symbolic="YES" id="pXB-RP-Zz6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="Response List" id="cra-N8-TIN"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="Lei-5M-9Gs" id="sCT-F7-F6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="1582" y="64"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

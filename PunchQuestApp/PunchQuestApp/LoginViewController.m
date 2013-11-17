@@ -44,7 +44,7 @@
                                                              FBSessionState status,
                                                              NSError *error) {
                 // we recurse here, in order to update buttons and labels
-                [self updateView];
+//                [self updateView];
             }];
         }
     }
@@ -97,7 +97,10 @@
                                       completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
                                           /* handle success + failure in block */
                                       }];
-        [self updateView];
+        if ([FBSession activeSession].isOpen) {
+            [self performSegueWithIdentifier:@"LoginSuccessfulSegue" sender:sender];
+        }
+//        [self updateView];
         
         // if the session isn't open, let's open it now and present the login UX to the user
 //        [appDelegate.session openWithCompletionHandler:^(FBSession *session,
