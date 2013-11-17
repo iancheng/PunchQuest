@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB1037F71838451A00A9DE84 /* CreateRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1037F61838451A00A9DE84 /* CreateRequestViewController.m */; };
 		BB1037FA1838462400A9DE84 /* RequestLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1037F91838462400A9DE84 /* RequestLocationViewController.m */; };
 		BB1037FD18384C0D00A9DE84 /* RequestActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1037FC18384C0D00A9DE84 /* RequestActivityViewController.m */; };
 		BB10380018384C7400A9DE84 /* RequestDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1037FF18384C7400A9DE84 /* RequestDetailsViewController.m */; };
@@ -32,6 +31,8 @@
 		BB950569183869020050CB28 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9492131838612400CF453B /* MobileCoreServices.framework */; };
 		BB95056A1838690B0050CB28 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9492171838615800CF453B /* Security.framework */; };
 		BB95056B183869130050CB28 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9492191838616300CF453B /* SystemConfiguration.framework */; };
+		F1BEEFF118387384006EAAEB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BEEFF018387384006EAAEB /* User.m */; };
+		F1BEEFF4183884FB006EAAEB /* Location.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1BEEFF2183884FB006EAAEB /* Location.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +81,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB1037F51838451A00A9DE84 /* CreateRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateRequestViewController.h; sourceTree = "<group>"; };
-		BB1037F61838451A00A9DE84 /* CreateRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateRequestViewController.m; sourceTree = "<group>"; };
 		BB1037F81838462400A9DE84 /* RequestLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestLocationViewController.h; sourceTree = "<group>"; };
 		BB1037F91838462400A9DE84 /* RequestLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestLocationViewController.m; sourceTree = "<group>"; };
 		BB1037FB18384C0D00A9DE84 /* RequestActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestActivityViewController.h; sourceTree = "<group>"; };
@@ -116,6 +115,9 @@
 		BB9492151838612F00CF453B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BB9492171838615800CF453B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BB9492191838616300CF453B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F1BEEFEF18387384006EAAEB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F1BEEFF018387384006EAAEB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F1BEEFF3183884FB006EAAEB /* Location.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Location.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,8 +191,6 @@
 		BB8C841E18381DE700E38983 /* PunchQuestApp */ = {
 			isa = PBXGroup;
 			children = (
-				BB1037F51838451A00A9DE84 /* CreateRequestViewController.h */,
-				BB1037F61838451A00A9DE84 /* CreateRequestViewController.m */,
 				BB8C842718381DE700E38983 /* AppDelegate.h */,
 				BB8C842818381DE700E38983 /* AppDelegate.m */,
 				BB8C842A18381DE700E38983 /* Main_iPhone.storyboard */,
@@ -205,6 +205,8 @@
 				BB1037FC18384C0D00A9DE84 /* RequestActivityViewController.m */,
 				BB1037FE18384C7400A9DE84 /* RequestDetailsViewController.h */,
 				BB1037FF18384C7400A9DE84 /* RequestDetailsViewController.m */,
+				F1BEEFEF18387384006EAAEB /* User.h */,
+				F1BEEFF018387384006EAAEB /* User.m */,
 			);
 			path = PunchQuestApp;
 			sourceTree = "<group>";
@@ -216,6 +218,7 @@
 				BB8C842118381DE700E38983 /* InfoPlist.strings */,
 				BB8C842418381DE700E38983 /* main.m */,
 				BB8C842618381DE700E38983 /* PunchQuestApp-Prefix.pch */,
+				F1BEEFF2183884FB006EAAEB /* Location.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -403,11 +406,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB1037FA1838462400A9DE84 /* RequestLocationViewController.m in Sources */,
+				F1BEEFF118387384006EAAEB /* User.m in Sources */,
 				BB8C842918381DE700E38983 /* AppDelegate.m in Sources */,
-				BB1037F71838451A00A9DE84 /* CreateRequestViewController.m in Sources */,
 				BB8C842518381DE700E38983 /* main.m in Sources */,
 				BB8C843518381DE700E38983 /* OffersViewController.m in Sources */,
 				BB1037FD18384C0D00A9DE84 /* RequestActivityViewController.m in Sources */,
+				F1BEEFF4183884FB006EAAEB /* Location.xcdatamodeld in Sources */,
 				BB10380018384C7400A9DE84 /* RequestDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,6 +662,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F1BEEFF2183884FB006EAAEB /* Location.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F1BEEFF3183884FB006EAAEB /* Location.xcdatamodel */,
+			);
+			currentVersion = F1BEEFF3183884FB006EAAEB /* Location.xcdatamodel */;
+			path = Location.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BB8C840D18381DE700E38983 /* Project object */;
 }

@@ -14,6 +14,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+//    setupRestKit();
+//    
+//    NSError *error = nil;
+//    NSURL *modelURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"RKGist" ofType:@"momd"]];
+//    // NOTE: Due to an iOS 5 bug, the managed object model returned is immutable.
+//    NSManagedObjectModel *managedObjectModel = [[[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL] mutableCopy];
+//    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+//    
+//    // Initialize the Core Data stack
+//    [managedObjectStore createPersistentStoreCoordinator];
+//    
+//    NSPersistentStore __unused *persistentStore = [managedObjectStore addInMemoryPersistentStore:&error];
+//    NSAssert(persistentStore, @"Failed to add persistent store: %@", error);
+//    
+//    [managedObjectStore createManagedObjectContexts];
+//    
+//    // Set the default store shared instance
+//    [RKManagedObjectStore setDefaultStore:managedObjectStore];
+
+    
+    
+    
+    
+    
+
+    
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
@@ -38,6 +65,17 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+}
+
+- (void)setupRestKit {
+    RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://www.rent2play.ca/testing/api"]];
+    
+//    [[manager HTTPClient] setDefaultHeader:@"X-Parse-REST-API-Key" value:@"your key"];
+//    [[manager HTTPClient] setDefaultHeader:@"X-Parse-Application-Id" value:@"your key"];
+    
+    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    manager.managedObjectStore = managedObjectStore;
 }
 
 
