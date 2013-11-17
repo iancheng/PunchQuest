@@ -132,12 +132,12 @@ typedef enum {
 -(void)layoutBottomView{
     if(!self.bottomRightView){
         _bottomRightView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
-        _bottomRightView.backgroundColor = [UIColor lightGrayColor];
+        _bottomRightView.backgroundColor = [UIColor colorWithRed:223/255.0 green:70/255.0 blue:97/255.0 alpha:1.0];
         [self insertSubview:_bottomRightView atIndex:0];
     }
     if(!self.bottomLeftView){
         _bottomLeftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
-        _bottomLeftView.backgroundColor =  [UIColor colorWithRed:132/255.0 green:176/255.0 blue:201/255.0 alpha:1.0];
+        _bottomLeftView.backgroundColor =  [UIColor colorWithRed:67/255.0 green:176/255.0 blue:42/255.0 alpha:1.0];
 
         [self insertSubview:_bottomLeftView atIndex:0];
     }

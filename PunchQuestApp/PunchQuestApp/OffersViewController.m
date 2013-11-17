@@ -164,10 +164,17 @@
         self.currentCell.revealing=NO;
         self.currentCell=cell;
     }
-        NSLog(@"cell did reveal: %u", [cell currentStatus]);
+    NSLog(@"cell did reveal: %u", [cell currentStatus]);
     
     // 3 is right, 1 is left
     
+    if([cell currentStatus] == kFeedStatusLeftExpanded) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:@"You have declined this offer" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } else if([cell currentStatus] == kFeedStatusRightExpanded) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:@"You have accepted this offer" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
     
 }
 
