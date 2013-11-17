@@ -31,6 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[self userInputLabel] setText:[NSString stringWithFormat:@"For %@ @ %@ with a group of %@", [user getActivity],
+                                    [user getLocation], [NSString stringWithFormat:@"%d",[user getNumPeople]]]];
 
     [self refreshTableData];
     
@@ -78,7 +81,7 @@
     _myTableView.delegate=self;
     _myTableView.dataSource=self;
     _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//    _myTableView.backgroundColor=[UIColor darkGrayColor];
+    _myTableView.backgroundColor=[UIColor colorWithRed:240/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
     [self.view addSubview:_myTableView];
     
 }

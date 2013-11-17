@@ -12,8 +12,7 @@
 @interface RequestDetailsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
     NSMutableArray *dataArray;
 }
-@property (weak, nonatomic) IBOutlet UILabel *activityLabel;
-@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userLabel;
 @property (weak, nonatomic) IBOutlet UIPickerView *groupNumberPicker;
 @property (strong, nonatomic) User *user;
 

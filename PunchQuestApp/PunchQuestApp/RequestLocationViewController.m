@@ -90,7 +90,9 @@
     [self locationPicker].delegate = self;
     [self locationPicker].dataSource = self;
     
-    
+    if([dataArray count] > 4) {
+        [[self locationPicker] selectRow:3 inComponent:0 animated:YES];
+    }
 }
 
 - (IBAction)currentLocationPressed:(UIButton *)sender {

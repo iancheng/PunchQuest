@@ -55,8 +55,13 @@
     [self groupNumberPicker].delegate = self;
     [self groupNumberPicker].dataSource = self;
     
-    [self activityLabel].text = [user getActivity];
-    [self locationLabel].text = [user getLocation];
+    
+    if(PICKER_MAX > 4) {
+        [[self groupNumberPicker] selectRow:3 inComponent:0 animated:YES];
+    }
+    
+    [[self userLabel] setText:[NSString stringWithFormat:@"For %@ @ %@", [user getActivity],
+                                    [user getLocation]]];
     
     
 }

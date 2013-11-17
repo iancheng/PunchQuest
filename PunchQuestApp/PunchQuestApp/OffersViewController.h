@@ -15,5 +15,6 @@
 
 @interface OffersViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,TPGestureTableViewCellDelegate>
 @property (strong, nonatomic) User *user;
+@property (weak, nonatomic) IBOutlet UILabel *userInputLabel;
 - (IBAction)refreshPressed:(UIButton *)sender;
 @end
