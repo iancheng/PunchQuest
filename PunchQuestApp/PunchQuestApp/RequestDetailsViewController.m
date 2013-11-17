@@ -7,6 +7,7 @@
 //
 
 #import "RequestDetailsViewController.h"
+#import "OffersViewController.h"
 #define PICKER_MIN 1
 #define PICKER_MAX 20
 
@@ -77,6 +78,11 @@
     
     
     [self performSegueWithIdentifier:@"offersSegue" sender:sender];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    OffersViewController *destViewController = segue.destinationViewController;
+    destViewController.user = user;
 }
 
 - (void)fetchedData:(NSData *)responseData {

@@ -9,7 +9,9 @@
 
 #import <Foundation/Foundation.h>
 #import "TPGestureTableViewCell.h"
+#import "User.h"
+#import <UIKit/UIKit.h>
 
 @interface OffersViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,TPGestureTableViewCellDelegate>
-
+@property (strong, nonatomic) User *user;
 @end

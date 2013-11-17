@@ -18,6 +18,7 @@
 
 @implementation OffersViewController
 
+@synthesize user;
 
 -(void)dealloc{
     self.myTableView=nil;
@@ -30,27 +31,51 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *path=[[NSBundle mainBundle] pathForResource:@"TableViewData" ofType:@"plist"];
+
+    
+//    NSString *phpLink = [NSString stringWithFormat: @"http://www.rent2play.ca/testing/api/responses/%d", [user getRequestID]];
+    NSString *phpLink = [NSString stringWithFormat: @"http://www.rent2play.ca/testing/api/responses/%d", 1];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:phpLink]];
+        [self performSelectorOnMainThread:@selector(fetchedData:)
+                               withObject:data waitUntilDone:YES];
+    });
+
+	
+}
+
+- (void)fetchedData:(NSData *)responseData {
+    NSArray* json = [NSJSONSerialization
+                     JSONObjectWithData:responseData //1
+                     options:kNilOptions error:nil];
+    NSLog(@"json: %@", json);
+    
+    
+
     _dataArray = [[NSMutableArray alloc]init];
-    NSArray *sourceArray = [[NSArray alloc] initWithContentsOfFile:path];
+
+    
+    NSArray *sourceArray = json;
     
     for(int i=0;i<[sourceArray count];i++){
         NSDictionary *dict = [sourceArray objectAtIndex:i];
         TPDataModel *item = [[TPDataModel alloc]init];
-        item.title = [dict objectForKey:@"Title"];
-        item.detail = [dict objectForKey:@"Detail"];
+        item.title = [dict objectForKey:@"storeName"];
+        item.detail = [dict objectForKey:@"message"];
         item.isExpand=NO;
         [_dataArray addObject:item];
     }
+
     
-	_myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0,
+    _myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,60,
                                                                 self.view.frame.size.width,
-                                                                self.view.frame.size.height)];
+                                                                self.view.frame.size.height/3)];
     _myTableView.delegate=self;
     _myTableView.dataSource=self;
     _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _myTableView.backgroundColor=[UIColor darkGrayColor];
+//    _myTableView.backgroundColor=[UIColor darkGrayColor];
     [self.view addSubview:_myTableView];
+    
 }
 
 
@@ -123,7 +148,7 @@
 #pragma mark
 #pragma mark TPGestureTableViewCellDelegate
 - (void)cellDidBeginPan:(TPGestureTableViewCell *)cell{
-    
+    NSLog(@"cell begin pan: %u",[cell currentStatus]);
 }
 
 - (void)cellDidReveal:(TPGestureTableViewCell *)cell{
@@ -131,6 +156,10 @@
         self.currentCell.revealing=NO;
         self.currentCell=cell;
     }
+        NSLog(@"cell did reveal: %u", [cell currentStatus]);
+    
+    // 3 is right, 1 is left
+    
     
 }
 
